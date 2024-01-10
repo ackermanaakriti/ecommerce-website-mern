@@ -1,0 +1,112 @@
+// import { useEffect, useState } from 'react'
+// import React from 'react'
+// import {Container} from '@mui/material'
+// import axios from 'axios'
+
+
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import * as Yup from 'yup';
+// import { Navigate, useNavigate } from 'react-router-dom';
+// import toast, { Toaster } from 'react-hot-toast';
+
+
+// const CreateProduct = () => {
+//   const navigate = useNavigate();
+
+
+//   const initialValues = {
+//     name: '',
+//     description: '',
+//     price: '',
+//     image: '',
+//     category:'',
+//     stock:''
+//   };
+
+  
+    
+    
+  
+
+//     const validationSchema = Yup.object({
+//       name: Yup.string().required('Username is required'),
+//       description: Yup.string().required('description is required'),
+//       price: Yup.number().required('price is required'),
+//       image: Yup.string().required('image is required'),
+//       category: Yup.string().required('category is required'),
+//       stock: Yup.number().required('stock is required'),
+
+
+
+
+    
+//     });
+
+    
+
+    
+//     const handleCreateProduct= async (values)=>
+//     {
+       
+//         console.log("helo from create product",values)
+//         try {
+//            const res = await axios.post('http://localhost:8020/createproduct', values);
+//             console.log('Product created successfully');
+           
+//             console.log(res)
+//                  if(res && res.data)
+//                  {
+//                   toast.success('product created successfull')
+                 
+//            navigate('/aboutus')
+//                  }
+          
+//           } catch (error) {
+//             console.error('Error creating product', error);
+//             toast.error('product already exist')
+//           }
+          
+
+     
+
+//     }
+//   return (
+//   <>
+//   <div className='register--form'>
+//     <Container>
+     
+//      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleCreateProduct}>
+//      <Form >
+//         <label>Product Name</label>
+//         <Field type='text'  name='name'   />
+//         <ErrorMessage name="name" component="div" className="error" />
+
+//         <label>Description</label>
+//         <Field type='text'  name='description'   />
+//         <ErrorMessage name="description" component="div" className="error" />
+
+//         <label>Category</label>
+//         <Field type='text'   name='category' />
+//         <ErrorMessage name="category" component="div" className="error" />
+
+//         <label>Price</label>
+//         <Field type='number'   name='price' />
+//         <ErrorMessage name="price" component="div" className="error" />
+
+//         <label>Stock</label>
+//         <Field type='number'   name='stock' />
+//         <ErrorMessage name="stock" component="div" className="error" />
+
+//         <button    type='submit'>Submit</button>
+
+       
+//      </Form>
+//      </Formik>
+//      <Toaster/>
+//     </Container>
+//   </div>
+//   </>
+//   )
+// }
+
+// export default CreateProduct

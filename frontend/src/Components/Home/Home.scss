@@ -1,0 +1,168 @@
+body 
+{
+    padding: 0;
+    margin:0;
+    font-family: 'Lexend', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+
+.home--container
+{
+background-color: rgb(246, 249, 252); 
+height: auto;
+}
+
+.image-container {
+
+    width: 100%;
+    max-width: 800px; 
+    img {
+        
+       
+    }
+  
+}
+
+
+
+.text-overlay {
+ 
+    top: 50%;
+    left: 40%;
+    transform: translate( -90%,-70%);
+    color: #513C1D;
+    font-size: 24px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    
+}
+.home--content
+{
+    padding:100px 20px 60px 20px;
+    
+}
+.home--content h1
+{
+ font-size: 50px;
+
+ line-height: 1.2;
+ 
+}
+.home--content button{
+    background-color: black;
+    color:white;
+
+    padding: 10px 25px;
+    border:none;
+    font-size: 20px;
+ 
+    border-radius: none;
+
+}
+.photos--home{
+    padding: 30px;
+}
+.photos--home img 
+{
+  
+   display: flex;
+   justify-content: center;
+   margin:auto;
+   width: 530px;
+        height: 400px;
+        display: block;
+  
+}
+
+.logo-wrapper
+{
+    h1 
+    {
+        color:#000000;
+        font-size: 40px;
+       
+        margin:3px;
+    }
+}
+.navlist
+{
+    ul 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    li 
+    {
+        list-style: none;
+        margin-left:10px;
+        font-size: 22px;
+        font-weight: 600;
+        color:#000000;
+        padding: 10px;
+    }
+}
+
+.staticdata--container
+{
+    display: flex;
+    padding:20px;
+    
+}
+
+.staticdata--container--content
+{
+
+    padding:30px 5px;
+    h5 
+    {
+        margin:0px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    p{
+        margin:0px;
+        font-size:14px ;
+    }
+}
+.staticdata
+{
+    box-shadow: 0 3px 20px rgba(82, 81, 81, 0.2);
+    margin:40px 0px;
+}
+.transparentdiv
+{
+    padding:40px 20px;
+}
+.trasnparentdiv--container
+{
+    background-image: url('../../images/backgroundimg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem 2rem;
+    color:#fff;
+    text-align: center;
+}
+.trasnparentdiv--container h3 
+{
+       font-size: 50px;
+       font-weight: 800;
+       margin:2px;
+}
+.trasnparentdiv--container p 
+{
+    font-size: 22px;
+       font-weight: 500;
+       margin:2px;
+}
+.trasnparentdiv--container button{
+    background-color: rgb(48, 48, 48);
+    color:white;
+
+    padding: 10px 25px;
+    border:none;
+    font-size: 20px;
+ 
+    border-radius: none;
+    margin-top:20px;
+}

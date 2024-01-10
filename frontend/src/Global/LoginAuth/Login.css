@@ -1,0 +1,47 @@
+.register--form 
+{
+    background-color: rgb(223, 226, 235);
+    padding: 20px 30px;
+    max-width: 400px;
+    margin:auto;
+}
+.register--form form 
+{
+   
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+
+.register--form form input 
+{
+    padding: 8px 13px;
+    margin:3px;
+    border:none;
+   
+}
+.register--form form label{
+    padding: 4px;
+    color:black;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+.register--form form button 
+{
+  margin:auto;
+  padding:8px 12px;
+  margin-top:10px;
+  background-color: rgb(88, 175, 237);
+  border:none;
+  color:white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.register--form form button:hover 
+{
+    cursor: pointer;
+    background-color: rgb(35, 125, 177);
+}

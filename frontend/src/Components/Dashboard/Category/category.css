@@ -1,0 +1,70 @@
+.createcategory--table
+{
+    
+}
+.createcategory--table table{
+    background-color: aliceblue;
+    width: 100%;
+    padding: 10px 30px 40px 30px;
+}
+.createcategory--table table thead
+{
+
+}
+.createcategory--table table thead th
+{
+    font-size: 20px;
+    padding: 10px;
+}
+.createcategory--table table tbody
+{
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+.createcategory--table table tbody td 
+{
+    padding:10px;
+    text-transform:capitalize;
+}
+.createcategory--table table tbody tr 
+{
+    border-bottom: 2px solid black;
+    background: #d7edf5;
+    padding:10px;
+}
+
+.category--form
+{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    width: 100%;
+}
+.category--form input 
+{
+    padding:10px 12px;
+    font-size: 18px;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin:2px;
+
+}
+.category--form button 
+{
+    padding:8px 12px;
+    font-size: 14px;
+    border:none;
+    
+    background-color: rgb(68, 170, 222);
+    color:white;
+    border-radius: 5px;
+    margin:2px;
+}
+.category--form button:hover 
+{
+    background-color: rgb(5, 71, 103);
+    color:white;
+    cursor: pointer;
+
+}

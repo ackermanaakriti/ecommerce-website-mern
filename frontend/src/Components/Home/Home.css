@@ -1,0 +1,92 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arvo", serif;
+  font-family: "Mukta", sans-serif;
+}
+
+.home--container {
+  background-image: url("../../images/minimalist.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px; /* Adjust this value based on your image size */
+}
+
+img {
+  width: 530px;
+  height: 500px;
+  display: block;
+  margin: 0;
+}
+
+.text-overlay {
+  top: 50%;
+  left: 40%;
+  transform: translate(-90%, -70%);
+  color: #513C1D;
+  font-size: 24px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+
+.home--content h1 {
+  font-size: 60px;
+  position: relative;
+  top: 28%;
+  line-height: 1.2;
+}
+
+.home--content button {
+  background-color: black;
+  color: white;
+  position: relative;
+  padding: 10px 25px;
+  border: none;
+  font-size: 20px;
+  top: 24%;
+  border-radius: none;
+}
+
+.photos--home {
+  padding: 30px;
+}
+
+.photos--home img {
+  height: 250px;
+  width: 300px;
+  transform: translate(70%, 10%);
+  rotate: 30deg;
+}
+
+.photos--home .majgulimg {
+  height: 270px;
+  width: 200px;
+  transform: translate(90%, -60%);
+  rotate: 30deg;
+}
+
+.logo-wrapper h1 {
+  color: #513C1D;
+  font-size: 50px;
+  font-weight: 800 !important;
+  margin: 3px;
+}
+
+.navlist ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navlist li {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #513C1D;
+  padding: 10px;
+}/*# sourceMappingURL=Home.css.map */

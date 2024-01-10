@@ -1,0 +1,26 @@
+.addtoCart--btn:hover
+{
+    background-color: rgb(128, 12, 50);
+    color:rgb(17, 16, 16);
+}
+.addtoCart--btn
+{
+    background-color:#d23f57;
+    padding: 10px;
+  text-transform: capitalize;
+    width:120px;
+    color:whitesmoke;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.description-section
+{
+
+}
+.description-section:hover
+{
+border-bottom: 1px solid rgb(241, 54, 85);
+color:#d23f57;
+}
+

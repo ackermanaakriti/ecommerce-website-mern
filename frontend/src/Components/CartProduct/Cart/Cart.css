@@ -1,0 +1,179 @@
+.shipping__fullname  
+{
+padding:0;
+
+    
+}
+
+ cart--buttons:hover
+ {
+background-color: #6e1838;
+ }
+
+ .applyvoucher--button 
+ {
+    background-color: #d42c6a;
+    color:white;
+    padding:10px;
+    width: 100%;
+    border:none;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+ }
+ .applyvoucher--button:hover
+ {
+    background-color: #6e1838;
+
+ }
+ .shippingsection--button
+ {
+    background-color: #d42c6a;
+    color:white;
+    border:none;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    padding:10px;
+ }
+ .shippingsection--button:hover{
+    background-color:#6e1838;
+ }
+ .billingaddress--buttons
+ {
+    background-color: #d42c6a;
+    color:white;
+    border:none;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    padding:10px;
+    width: 100%;
+    margin:4px;
+ }
+ .billingaddress--buttons:hover
+ {
+    background-color: #6e1838;
+ }
+.fullname__textfield label
+{
+    font-family: __Open_Sans_c8a2b8, __Open_Sans_Fallback_c8a2b8;
+    font-weight: 400;
+    line-height: 1.4375em;
+    color: rgb(214, 51, 116);
+    box-sizing: border-box;
+    cursor: text;
+    width:70%;
+    padding:4px 14px;
+
+}
+/* shipping address */
+.textfield__
+{
+    width: 100%;
+    margin:20px;
+}
+.shippingaddress__container
+{
+   width:  50%;
+
+  margin: 3rem 5rem 2rem 5rem;
+
+}
+
+
+
+
+/* total price component */
+.submit__button
+{
+    margin: auto ;
+}
+
+
+
+
+.total__typefield
+{
+    color:rgb(125, 135, 156);
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.5;
+    font-family: __Open_Sans_c8a2b8, __Open_Sans_Fallback_c8a2b8;
+
+}
+.pricetagspan
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+    font-family:sans-serif;
+  
+   
+
+}
+.typo__container
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.totalpricespan
+{
+    font-size: 25px;
+    margin-top: 1rem;
+float: right;
+}
+.apply__voucher 
+{
+    display: inline-flex;
+  align-items: center;
+ background-color: rgb(174, 61, 80);
+  border-radius: 4px;
+  border: 2px solid rgb(178, 49, 71);
+  width: 100%;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  margin:2px;
+ 
+}
+/* billing component */
+.billingaddress__container
+{
+   width:  50%;
+
+  margin: 1rem 1rem 2rem 5rem;
+
+}
+
+
+/* payment */
+.paymentmethod__container
+{
+   
+    margin: 5rem 3rem 2rem 7rem;
+}
+.paypalsubmit--btn
+{
+    background-color: blueviolet;
+}
+
+/* .MuiStepConnector-root 
+{
+    color:rgb(224, 35, 67);
+} 
+.MuiStepIcon-root
+{
+    color:aqua;
+}
+.MuiStepIcon-root-MuiSvgIcon-root
+{
+    color:aqua;
+} */
+/* .MuiRadio-root
+{
+    color:red;
+} */
