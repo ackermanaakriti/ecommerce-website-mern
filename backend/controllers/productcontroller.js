@@ -9,14 +9,23 @@ const createProduct = async (req, res, next) => {
 };
 
 const getDetailproduct = async (req,res)=>
-{
-     let productid = await productdata.findById(req.params.id);
-    //  if (!productid) {
-    //     return res.status(502).json("product not found to delete");
-    //   }
-      res.status(200).json({msg:"got product detial",productid} );
 
-}
+{
+  const productId = req.params.id;
+  try {
+    const data = await productdata.findById(productId);
+    console.log(data)
+    if (!data) {
+      return res.status(404).json({ error: "product not found" });
+    }
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "server error" });
+  }
+     }
+    
+
+
 
 // get all product
 const getAllproducts = async (req, res) => {
@@ -55,18 +64,52 @@ const productDelete = async (req, res) => {
 const getproductCategory= async (req, res) => {
   try {
     const category = req.params.category;
-    const products = await productdata.find({ category: category });
-    res.json(products);
+    console.log(category)
+    const products = await productdata.find({ category });
+    console.log(products)
+    if (!products)
+    {
+      res.json('product not found')
+      console.log('productnot found')
+    }
+    res.json({products:'helo',products});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
+const searchProduct= async(req,res)=>
+{
+
+  const  querydata  = req.body.query;
+  console.log(querydata)
+ try{ 
+  const results = await productdata.find({
+    $or: [
+      { name: { $regex: querydata, $options: 'i' } },
+      { category: { $regex: querydata, $options: 'i' } },
+    ],
+  });
+  res.json(results)
+
+}
+ 
+  catch(err) {
+       console.log(err);
+       res.json({'error ':err})
+  }
+
+
+}
+
 module.exports = {
   getAllproducts,
   createProduct,
   productUpdate,
   productDelete,
   getDetailproduct,
-  getproductCategory
+  getproductCategory,
+  searchProduct
+
 };

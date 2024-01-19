@@ -9,18 +9,18 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Navigate, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import { useAuth } from '../context/contextauth'
+
 
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const [auth,setAuth] = useAuth();
+  
 
   const initialValues = {
     name: '',
     email: '',
     password: '',
-    confirmPassword: '',
+  
   };
 
   
@@ -56,10 +56,10 @@ const SignUp = () => {
                  if(res && res.data)
                  {
                   toast.success('login successfull')
-                 setAuth({...auth, user:res.data.user,token:res.data.token})
+                //  setAuth({...auth, user:res.data.user,token:res.data.token})
                  }
                  localStorage.setItem('authsignup',JSON.stringify(res.data))
-           navigate('/aboutus')
+           navigate('/')
           
           } catch (error) {
             console.error('Error registering user', error);

@@ -1,20 +1,22 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { Box } from '@mui/system'
 import { Typography, Button  } from '@mui/material'
 import HoverRating from './Rating'
 import { Link } from 'react-router-dom'
 import './Pdp.css'
+import { ProductContext } from '../Components/Context/Context'
 
 
-const ProductInfo = () => {
+const ProductInfo = () => { 
+  const {selectedProduct} = useContext(ProductContext)
   return (
    <>
    <Box>
    <Box pl={10}>
     <Box>
        <Typography sx={{fontWeight:'700' , }} fontSize={'30px'} color={'#232423'}  variant='h1'>
-       NikeCourt Zoom Vapor Cage
+      {selectedProduct?.name}
        </Typography>
     </Box>
 
@@ -67,10 +69,10 @@ const ProductInfo = () => {
    {/* price tag */}
    <Box >
    <Typography pt={3} variant='h1' fontWeight={'bold'} fontSize={25} color={'#d23f57'}>
-   $245.00
+   Rs:{selectedProduct?.price}
     </Typography>
-    <Typography color={'gray'}>
-  stock available
+    <Typography sx={{marginTop:'10px'}} color={'gray'}>
+  stock : {selectedProduct?.stock}
     </Typography>
    </Box>
 

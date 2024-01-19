@@ -14,13 +14,13 @@ import MainCart from '../Components/CartProduct/Cart/MainCart'
 import DetailsS from '../ProductDetails/Details'
 import SignUp from '../Global/LoginAuth/SignUp'
 import Aboutus from '../Components/Pages/Aboutus'
-import { useAuth } from '../Global/context/contextauth'
-import PrivateRoute from './PrivateRoute'
+import Categorizedpage from '../Components/Pages/productpaages/Categorizedpage'
 import CreateCategory from '../Components/Dashboard/Category/CreateCategory'
-import CategoryPage from '../Components/Pages/ProductCategorypages/CategoryPage'
+import Searchedpage from '../Components/Pages/productpaages/SearchedPage'
+
 
 const Routers = () => {
-  const[auth,setAuth]=useAuth();
+
   return (
     <>
     <Routes >
@@ -30,7 +30,8 @@ const Routers = () => {
     <Route path='/' element={<Home/>}/>
     
 
-<Route path="/admin" element={  auth?.token? <Dashboard/>: <LogIn/> } />
+
+<Route path='/dashboard' element={<Dashboard/>}/>
 
 <Route path='/createproduct' element={<CreateProduct/>}/>
  <Route path='/products' element={<ProductList/>} />
@@ -40,8 +41,10 @@ const Routers = () => {
  <Route path='/productdetail' element={<DetailsS/>}/>
  <Route path='/signup' element={<SignUp/>}/>
  <Route path='/aboutus' element={<Aboutus/>}/>
- <Route path='/createcategory' element={<CreateCategory/>}/>
- <Route path='/category' element={<CategoryPage/>}/>
+ <Route path='/productpages' element ={<Categorizedpage/>}/>
+ <Route path='/createcategory' element ={<CreateCategory/>}/>
+ <Route path='/searchedproduct' element ={<Searchedpage/> }/>
+
 
 
  

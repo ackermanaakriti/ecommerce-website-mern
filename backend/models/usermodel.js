@@ -22,39 +22,24 @@ const userSchema = new mongoose.Schema({
         type:String,
         require:[true,"please enter your password"],
         minlength:[8,"password should be greater than 8 character"],
-        select:false,   
+        
     },
-    avatar:{
-        puglic_id:{
-            type:String,
-            require:true
-        },
-        url:
-        {
-            type:String,
-            require:true
-        }
-    },
+  
     role:{
         type:String,
         default:"user",
         enum:["admin","user"]
 
     },
+    address: String,
+
+phone:Number,
     resetpasswordToke:String,
     resetPasswordExpire:Date,
 });
 // password hashing
 
-userSchema.pre('save', async function ()
-{
-    if(!this.isModified('password'))
-    {
-        next();
-    }
-    this.password= await bcrypt.hash(this.password,10);
-    console.log(`from usermodel ${this.password}`)
-});
+
 
 // // password comapare
 userSchema.methods.comparePassword = async function (enterdPassword)

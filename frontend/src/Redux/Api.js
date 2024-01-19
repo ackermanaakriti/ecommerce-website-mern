@@ -19,14 +19,9 @@ const productApi = createApi({
     ,
 
 
-   fetchProduct: builder.query({
-    query: () => {
-     return {
-      url: "/products",
-      method: "GET",
-     };
-    },
-   }),
+    getAllProducts: builder.query({
+      query: () => '/products',
+    }),
    
    createProduct: builder.mutation({
     query: (newproduct) => ({
@@ -44,10 +39,17 @@ const productApi = createApi({
         method: "GET",
        };
     }
-  })
+  }),
+  getProductByCategory:builder.query({
+    query: (category) => `/products/${category}`
+   })
 
   }; 
  },
+
+ 
 });
 export { productApi };
-export const { useFetchProductQuery,useCreateProductMutation,useGetProductByIdQuery,useRegisteruserMutation} =productApi ;
+export const { useGetAllProductsQuery,useCreateProductMutation,useGetProductByIdQuery,
+  useGetProductByCategoryQuery,
+  useRegisteruserMutation} =productApi ;

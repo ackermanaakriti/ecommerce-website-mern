@@ -1,20 +1,28 @@
-const JWT = require ('jsonwebtoken');
+const jwt = require ('jsonwebtoken');
+
 const UserDetail = require('../models/usermodel');
 
 
-const authenticateToken = (req, res, next) => {
-   try 
-   {
-    const decode = JWT.verify(
-        req.headers.authorization,'heloakri'
-    );
-    req.user=decode;
-    next();
-   }
-   catch(err)
-   {
-    console.log(err)
-   }
+const authenticateToken = async (req, res, next) => {
+  const token = req.header("Authorization");
+  if (!token) {
+    return res.status(401).json({ error:"Unauthorized: token Missing"});
+  }
+  
+    try {
+      const decoded = jwt.verify(token, 'heloakri');   
+      const { username } = decoded;
+  
+      const userFromDatabase = await UserDetail.findOne(username);
+  
+      if (!userFromDatabase) {
+        return res.status(401).json({ message: "Unauthorized: User does not exist" });
+       }
+      req.user = userFromDatabase;
+      next();
+    } catch (error) {
+      return res.status(401).json({ error: "Unauthorized: Invalid token" });
+    }
   };
 
   const isAdmin= async(req,res,next)=>

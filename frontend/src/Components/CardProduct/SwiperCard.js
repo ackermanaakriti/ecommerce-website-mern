@@ -6,37 +6,27 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container } from "@mui/material";
 
 export default function SwiperCard() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3
+  // };
   return (
     <Container>
         <div className="swiper--container">
-    <Slider {...settings}>
+    {/* <Slider {...settings}>
      
       <div>
        <CardProduct/>
       
       </div>
-      <div>
-        <CardProduct/>
-      </div>
-      <div>
-      <CardProduct/>
-      </div>
-
-      <div>
-      <CardProduct/>
-      </div>
-     
-  
-    
-    </Slider>
+   
+    </Slider> */}
+ <CardProduct/>
     </div>
+
     </Container>
   );
 }

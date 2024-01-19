@@ -1,13 +1,23 @@
-import React from 'react'
-import { useAuth } from '../../Global/context/contextauth'
+import React, { useState } from 'react'
 import Test from '../Test'
 
+
+
 const Aboutus = () => {
-    const [auth,setAuth]= useAuth()
+  const [open,setopen] = useState(true)
+  const handleclick =()=>
+  {
+    setopen(!open)
+  }
+
   return (
 
-    <div>{JSON.stringify(auth)}
-      <Test/></div>
+    <>
+    <button  className='' disabled onClick={handleclick} >Click me</button>
+    {open&&
+    <div>hello ther</div>}
+    
+    </>
   
   )
 }

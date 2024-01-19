@@ -22,6 +22,10 @@ const productSchema= new mongoose.Schema({
        type:String
 
     },
+    quantity:
+    {
+        type:String
+    },
 
 
         category:{

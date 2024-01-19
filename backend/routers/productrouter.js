@@ -1,28 +1,23 @@
 const express = require('express');
 const formidable = require('express-formidable')
-const { getAllproducts, createProduct, productUpdate, productDelete,getDetailproduct,displayImage, getproductCategory} = require('../controllers/productcontroller');
+const { getAllproducts, searchProduct, createProduct, productUpdate, productDelete,getDetailproduct,getproductCategory} = require('../controllers/productcontroller');
 
 const router = express.Router();
 const multer = require('multer')
-const path = require('path')
+const path = require('path');
+const { authenticateToken } = require('../middleware/requireSignin');
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './public/images');
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + "--" + file.originalname);
-    }
-}); 
 
-const upload = multer({ storage: storage });
+
+
 
 
 router.route('/products').get(getAllproducts)
 
 // router.route('/forimg').post(upload.single('image'),displayImage)
 router.route('/createproduct').post(  createProduct)
-router.route('/products/:category').get(getproductCategory)
+router.route('/product/:category').get(getproductCategory)
+router.route('/productt').post(searchProduct)
 router.route('/products/:id').put(productUpdate).delete(productDelete).get(getDetailproduct)
 
 
